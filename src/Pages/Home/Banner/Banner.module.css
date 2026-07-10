@@ -1,0 +1,19 @@
+.banner {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	color: var(--background-secondary);
+}
+
+.banner h1 {
+	font-size: 3rem;
+}
+.banner p {
+	font-size: 0.875rem;
+	margin: 0.75rem 0;
+}

@@ -1,24 +1,26 @@
 .header {
-	box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.1);
 	padding: 1rem 0;
-	width: 100%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
 }
 
-.divLogo {
-	display: flex;
-	align-items: center;
-}
-.logo {
-	margin-right: 0.5rem;
-}
-
-.divLogo {
-	display: flex;
-	align-items: center;
-}
 .nav {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
+}
+
+.logo {
+	margin-right: 0.5rem;
+	display: flex;
+	align-items: center;
+}
+.divLogo {
+	display: flex;
+	align-items: center;
+}
+
+.divLogo {
+	display: flex;
 	align-items: center;
 }
 
@@ -40,8 +42,12 @@
 }
 .divSearch input {
 	padding: 10px 10px 10px 47px;
-	background: url('../../Assets/icons/Search.svg') no-repeat 10px center;
+	background: url('../../Assets/icons/Search.svg') no-repeat 12px center;
 	border: 1px solid #d9d9d9;
 	border-radius: 6px;
 	outline: none;
+	transition: 0.3s;
+}
+.divSearch input:focus {
+	border-color: var(--color-primary);
 }
