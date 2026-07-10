@@ -1,0 +1,8 @@
+.pageHeader {
+	margin: 1.25rem 0;
+}
+
+.pageHeader h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}

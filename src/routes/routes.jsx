@@ -16,7 +16,7 @@ const router = createBrowserRouter([
 		path: '/',
 		element: <Layout />,
 		handle: {
-			breadcrumb: 'Home',
+			pageTitle: 'Home',
 		},
 		children: [
 			{
@@ -27,63 +27,63 @@ const router = createBrowserRouter([
 				path: 'login',
 				element: <Login />,
 				handle: {
-					breadcrumb: 'Login',
+					pageTitle: 'Login',
 				},
 			},
 			{
 				path: 'About',
 				element: <About />,
 				handle: {
-					breadcrumb: 'About',
+					pageTitle: 'About',
 				},
 			},
 			{
 				path: 'Cart',
 				element: <Cart />,
 				handle: {
-					breadcrumb: 'Cart',
+					pageTitle: 'Cart',
 				},
 			},
 			{
 				path: 'Categories',
 				element: <Categories />,
 				handle: {
-					breadcrumb: 'Categories',
+					pageTitle: 'Categories',
 				},
 			},
 			{
 				path: 'Checkout',
 				element: <Checkout />,
 				handle: {
-					breadcrumb: 'Checkout',
+					pageTitle: 'Checkout',
 				},
 			},
 			{
 				path: 'Contact',
 				element: <Contact />,
 				handle: {
-					breadcrumb: 'Contact',
+					pageTitle: 'Contact',
 				},
 			},
 			{
 				path: 'Product',
 				element: <Product />,
 				handle: {
-					breadcrumb: 'Product',
+					pageTitle: 'Product',
 				},
 			},
 			{
 				path: 'Profile',
 				element: <Profile />,
 				handle: {
-					breadcrumb: 'Profile',
+					pageTitle: 'Profile',
 				},
 			},
 			{
 				path: 'Register',
 				element: <Register />,
 				handle: {
-					breadcrumb: 'Register',
+					pageTitle: 'Register',
 				},
 			},
 		],

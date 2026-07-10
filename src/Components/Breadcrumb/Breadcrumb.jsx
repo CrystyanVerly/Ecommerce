@@ -5,24 +5,24 @@ import ChevronRight from '../../Assets/icons/ChevronRight.svg?react';
 
 const Breadcrumb = () => {
 	const matches = useMatches();
-	const crumbs = matches.filter((match) => match.handle?.breadcrumb);
+	const crumbs = matches.filter((match) => match.handle?.pageTitle);
 
 	if (crumbs.length <= 1) return null;
 
 	return (
-		<nav className={styles.breadcrumb} aria-label="breadcrumb">
+		<nav className={`${styles.breadcrumbContainer}`} aria-label="breadcrumb">
 			{crumbs.map((crumb, index) => {
 				const isLast = index === crumbs.length - 1;
 
 				return (
-					<span key={crumb.pathname}>
+					<span key={crumb.pathname} className={styles.breadcrumb}>
 						{!isLast ? (
 							<>
-								<Link to={crumb.pathname}>{crumb.handle.breadcrumb}</Link>
+								<Link to={crumb.pathname}>{crumb.handle.pageTitle}</Link>
 								<ChevronRight />
 							</>
 						) : (
-							<span>{crumb.handle.breadcrumb}</span>
+							<span>{crumb.handle.pageTitle}</span>
 						)}
 					</span>
 				);

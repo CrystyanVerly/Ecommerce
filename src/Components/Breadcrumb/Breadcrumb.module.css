@@ -1,0 +1,10 @@
+.breadcrumb:first-child {
+	display: inline-flex;
+	align-items: center;
+}
+.breadcrumb:last-child {
+	font-weight: 500;
+}
+.breadcrumb {
+	padding: 0.5rem 0;
+}
