@@ -12,7 +12,7 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	max-width: 328px;
+	max-width: 400px;
 	padding: 1rem 2rem;
 	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 	border-radius: 6px;
@@ -39,7 +39,6 @@
 }
 
 .featureCard h3 {
-	font-size: 1rem;
 	font-weight: 600;
 	margin-top: 1.5rem;
 	margin-bottom: 0.75rem;
