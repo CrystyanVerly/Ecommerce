@@ -1,0 +1,86 @@
+.mobileBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	cursor: pointer;
+	color: #374151;
+	transition: color 0.3s ease;
+}
+
+.mobileBtn:hover {
+	color: #111827;
+}
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	background: rgba(0, 0, 0, 0.45);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition:
+		opacity 0.3s ease,
+		visibility 0.3s ease;
+	z-index: 999;
+}
+
+.overlayOpen {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.mobileNav {
+	position: relative;
+	width: 320px;
+	max-width: 85vw;
+	height: 100vh;
+	background: #fff;
+	padding: 1.5rem;
+	box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.mobileNavOpen {
+	transform: translateX(0);
+}
+
+.closeBtn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	margin-bottom: 2rem;
+	background: none;
+	cursor: pointer;
+	color: #374151;
+	transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+	color: #111827;
+}
+
+.mobileLinks {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	list-style: none;
+}
+
+.mobileLinks a {
+	display: block;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #374151;
+	transition: color 0.2s ease;
+}
+
+.mobileLinks a:hover,
+.mobileLinks a.active {
+	color: #111827;
+}

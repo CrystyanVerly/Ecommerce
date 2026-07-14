@@ -1,53 +1,125 @@
 .header {
-	padding: 1rem 0;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+	width: 100%;
+	padding: 1.1rem 0;
 }
 
 .nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 3rem;
 }
 
 .logo {
-	margin-right: 0.5rem;
 	display: flex;
 	align-items: center;
-}
-.divLogo {
-	display: flex;
-	align-items: center;
+	gap: 0.75rem;
+	flex-shrink: 0;
 }
 
-.divLogo {
-	display: flex;
-	align-items: center;
-}
-
-.divLinks {
-	display: flex;
-	gap: 2rem;
-	padding: 0.5rem;
-}
-
-.divUserInterest {
+.navLinks {
 	display: flex;
 	align-items: center;
 	gap: 2rem;
-	position: relative;
 }
 
-.divSearch {
-	position: relative;
+.userActions {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex-shrink: 0;
 }
-.divSearch input {
-	padding: 10px 10px 10px 47px;
-	background: url('../../Assets/icons/Search.svg') no-repeat 12px center;
-	border: 1px solid #d9d9d9;
-	border-radius: 6px;
-	outline: none;
+
+.searchProduct {
+	position: relative;
+	display: flex;
+	align-items: center;
 	transition: 0.3s;
 }
-.divSearch input:focus {
-	border-color: var(--color-primary);
+
+.searchProduct input {
+	padding: 0 1rem 0 3rem;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	outline: none;
+	padding: 0.75rem 1rem;
+	transition: border-color 0.2s ease;
+}
+
+.searchProduct svg {
+	color: #374151;
+}
+.searchProduct input:focus {
+	border-color: #111827;
+}
+
+.searchProduct input[type='search']::-webkit-search-cancel-button {
+	appearance: none;
+	display: none;
+}
+
+.searchProduct button {
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	transform: translateY(-50%);
+	background: none;
+	cursor: pointer;
+}
+.searchProduct button svg {
+	width: 22px;
+	height: 22px;
+}
+.userActions {
+	display: flex;
+	align-items: center;
+}
+.userActions a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #374151;
+	transition: 0.3s;
+}
+
+.menuButton {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.header {
+		font-size: 0.875rem;
+	}
+	.logo > :last-child {
+		display: none;
+	}
+	.nav {
+		gap: 0.5rem;
+	}
+	.navLinks {
+		gap: 1.5rem;
+		margin-left: 24px;
+	}
+	.userActions {
+		gap: 1rem;
+	}
+	.searchProduct {
+		flex: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.navLinks {
+		display: none;
+	}
+	.searchProduct {
+		display: none;
+	}
+	.menuButton {
+		display: flex;
+	}
 }
