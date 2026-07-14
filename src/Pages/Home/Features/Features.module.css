@@ -1,16 +1,29 @@
-.featuresContainer {
+.features {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 3.375rem;
+	gap: 3rem;
 	margin-top: 5rem !important;
 	margin-bottom: 5rem !important;
 	justify-items: center;
+	align-items: stretch;
 }
 
 .featureCard {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	max-width: 328px;
 	padding: 1rem 2rem;
 	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+	border-radius: 6px;
+	background: #fff;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+.featureCard:hover {
+	transform: translateX(-4px);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 .icon {
 	display: flex;
@@ -22,7 +35,7 @@
 	background: var(--color-neutral-100);
 }
 .icon svg {
-	color: var(--color-black);
+	color: #333;
 }
 
 .featureCard h3 {
@@ -36,4 +49,27 @@
 	font-weight: 300;
 	font-size: 0.875rem;
 	max-width: 272px;
+	line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+	.features {
+		gap: 1.5rem;
+	}
+}
+@media (max-width: 768px) {
+	.features {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.featureCard {
+		max-width: 100%;
+		padding: 1.5rem;
+	}
+}
+@media (max-width: 425px) {
+	.features {
+		grid-template-columns: 1fr;
+		margin-top: 2rem !important;
+		margin-bottom: 2rem !important;
+	}
 }

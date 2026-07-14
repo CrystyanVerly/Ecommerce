@@ -1,5 +1,5 @@
 .mobileBtn {
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	background: none;
@@ -83,4 +83,10 @@
 .mobileLinks a:hover,
 .mobileLinks a.active {
 	color: #111827;
+}
+
+@media (max-width: 768px) {
+	.mobileBtn {
+		display: flex;
+	}
 }

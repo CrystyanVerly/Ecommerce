@@ -1,19 +1,59 @@
 .banner {
 	position: relative;
+	width: 100%;
+}
+
+.banner img {
+	width: 100%;
+	object-fit: cover;
+	object-position: top center;
+	height: 89vh;
 }
 
 .overlay {
 	position: absolute;
 	top: 50%;
-	left: 10%;
+	left: 8%;
 	transform: translateY(-50%);
 	color: var(--background-secondary);
+	max-width: 580px;
 }
 
 .banner h1 {
-	font-size: 3rem;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	line-height: 1.1;
 }
 .banner p {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	margin: 0.75rem 0;
+	line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+	.overlay {
+		left: 5%;
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.banner img {
+		height: 70vh;
+	}
+	.overlay {
+		left: 1.5rem;
+		right: 1.5rem;
+		max-width: none;
+	}
+	.banner p {
+		font-size: 0.95rem;
+	}
+}
+@media (max-width: 425px) {
+	.banner h1 {
+		font-size: 1.5rem;
+	}
+	.banner p {
+		font-size: 0.75rem;
+	}
 }
