@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import Banner from './Banner/Banner';
 import Features from './Features/Features';
 import BestSelling from '../../Components/BestSelling/BestSelling';
+import BrowseSection from './BrowseSection/BrowseSection';
 
 const Home = () => {
 	return (
@@ -10,6 +11,7 @@ const Home = () => {
 			<Banner />
 			<Features />
 			<BestSelling />
+			<BrowseSection />
 		</div>
 	);
 };
