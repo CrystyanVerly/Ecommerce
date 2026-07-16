@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BrowseSection.module.css';
-import ButtonNavigation from '../../../Components/Button/ButtonNavigation';
+import Button from '../../../Components/Button/Button';
 import ArrowRight from '../../../Assets/icons/ArrowRight.svg?react';
 import BrowseImg from './Assets/Browse.jpg';
 
@@ -14,10 +14,10 @@ const BrowseSection = () => {
 						Step into a world of style and explore our diverse collection of
 						clothing categories.
 					</p>
-					<ButtonNavigation to="/categories">
+					<Button to="/categories">
 						Start Browsing
 						<ArrowRight />
-					</ButtonNavigation>
+					</Button>
 				</div>
 				<img src={BrowseImg} alt="Browse image" />
 			</div>

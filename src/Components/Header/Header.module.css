@@ -34,19 +34,23 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	transition: 0.3s;
+	flex: 1;
 }
 
-.searchProduct input {
-	padding: 0 1rem 0 3rem;
-	border: 1px solid #d1d5db;
-	border-radius: 6px;
-	outline: none;
-	padding: 0.75rem 1rem;
-	transition: border-color 0.2s ease;
+.searchProduct button {
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 
 .searchProduct svg {
+	width: 22px;
+	height: 22px;
 	color: #374151;
 }
 .searchProduct input:focus {

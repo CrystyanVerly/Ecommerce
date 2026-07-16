@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import Features from './Features/Features';
 import BestSelling from '../../Components/BestSelling/BestSelling';
 import BrowseSection from './BrowseSection/BrowseSection';
+import Newsletter from './Newsletter/Newsletter';
 
 const Home = () => {
 	return (
@@ -12,6 +13,7 @@ const Home = () => {
 			<Features />
 			<BestSelling />
 			<BrowseSection />
+			<Newsletter />
 		</div>
 	);
 };
