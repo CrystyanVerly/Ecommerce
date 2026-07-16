@@ -13,7 +13,6 @@ const BestSelling = () => {
 				const response = await fetch(URL_API);
 				if (!response.ok) throw new Error('Erro ao buscar produtos');
 				const data = await response.json();
-				console.log(data.products);
 
 				setProducts(data.products);
 			} catch (err) {

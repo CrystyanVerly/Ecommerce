@@ -23,6 +23,54 @@
 	gap: 2rem;
 }
 
+.navLinks a {
+	position: relative;
+	width: fit-content;
+	color: #374151;
+	transition: color 0.2s ease;
+}
+
+.navLinks a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 0%;
+	height: 1px;
+	background-color: currentColor;
+	transition: width 0.25s ease;
+}
+
+.navLinks a:hover {
+	color: #111827;
+}
+
+.navLinks a:hover::after {
+	width: 100%;
+}
+
+.navLinks button {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	color: #374151;
+	background: none;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.navLinks button:hover {
+	color: #111827;
+}
+
+.navLinks button svg {
+	transition: transform 0.25s ease;
+}
+
+.navLinks button:hover svg {
+	transform: translateY(1px) rotate(180deg);
+}
+
 .userActions {
 	display: flex;
 	align-items: center;
@@ -35,6 +83,10 @@
 	display: flex;
 	align-items: center;
 	flex: 1;
+}
+
+.searchProduct input {
+	transition: border-color 0.2s ease;
 }
 
 .searchProduct button {
@@ -52,7 +104,16 @@
 	width: 22px;
 	height: 22px;
 	color: #374151;
+	transition:
+		color 0.2s ease,
+		transform 0.2s ease;
 }
+
+.searchProduct button:hover svg {
+	color: #111827;
+	transform: scale(1.1);
+}
+
 .searchProduct input:focus {
 	border-color: #111827;
 }
@@ -78,16 +139,23 @@
 	width: 22px;
 	height: 22px;
 }
+
 .userActions {
 	display: flex;
 	align-items: center;
 }
+
 .userActions a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #374151;
 	transition: 0.3s;
+}
+
+.userActions a:hover {
+	color: #111827;
+	transform: translateY(-2px) scale(1.05);
 }
 
 .menuButton {

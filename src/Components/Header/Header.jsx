@@ -24,9 +24,9 @@ const Header = () => {
 				<div className={styles.userActions}>
 					<SearchProduct className={styles.searchProduct} />
 
-					<CartHeader />
-
 					<ProfileHeader />
+
+					<CartHeader />
 
 					<MobileMenu className={styles.menuButton} />
 				</div>
