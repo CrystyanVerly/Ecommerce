@@ -1,113 +1,203 @@
 .footerContainer {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: 'social company payments';
+	align-items: start;
+	gap: 4rem;
 	margin-top: 4.625rem !important;
 }
 
 .socialSection {
-	width: 100%;
 	max-width: 272px;
+	grid-area: social;
 }
+
 .socialSection p {
-	margin-top: 0.75rem;
-	margin-bottom: 2rem;
+	margin: 0.75rem 0 2rem;
 }
+
 .socialMedias {
 	display: flex;
-	align-items: center;
-	justify-content: start;
 	gap: 1.625rem;
 }
 
-.socialMedias a,
-.socialMedias svg {
+.socialMedias a {
+	display: inline-flex;
 	color: #6b7280;
 	transition:
-		color 0.2s ease,
-		transform 0.2s ease;
+		color 0.2s,
+		transform 0.2s;
 }
-.socialMedias a:hover,
-.socialMedias a:hover svg {
+
+.socialMedias a svg {
+	transition: inherit;
+}
+
+.socialMedias a:hover {
 	color: #111827;
 	transform: translateY(-3px);
 }
 
-.supportSection h4,
-.companySection h4,
-.shopSection h4,
-.paymentsSection h4 {
-	margin-bottom: 2.5rem;
+.companySection {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	grid-area: company;
 }
 
-.supportSection ul,
-.companySection ul,
-.shopSection ul {
+.footerSection h4,
+.paymentsSection h4 {
+	margin-bottom: 2rem;
+}
+
+.footerSection ul {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	padding: 1rem 0;
 }
 
-.supportSection a,
-.companySection a,
-.shopSection a {
-	color: #6b7280;
+.footerSection a {
 	position: relative;
-	width: fit-content;
-	transition: color 0.2s ease;
+	display: inline-block;
+	color: #6b7280;
+	transition: color 0.2s;
 }
 
-.supportSection a::after,
-.companySection a::after,
-.shopSection a::after {
+.footerSection a::after {
 	content: '';
 	position: absolute;
 	left: 0;
 	bottom: -2px;
-	width: 0%;
+	width: 0;
 	height: 1px;
-	background-color: currentColor;
-	transition: width 0.25s ease;
+	background: currentColor;
+	transition: width 0.25s;
 }
 
-.supportSection a:hover,
-.companySection a:hover,
-.shopSection a:hover {
+.footerSection a:hover {
 	color: #111827;
 }
 
-.supportSection a:hover::after,
-.companySection a:hover::after,
-.shopSection a:hover::after {
+.footerSection a:hover::after {
 	width: 100%;
 }
 
-.paymentsSection {
-	align-self: flex-start;
-}
 .paymentsSection ul {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	gap: 1rem;
+}
+.paymentsSection {
+	grid-area: payments;
+	justify-self: flex-end;
+}
+.paymentsSection li {
+	opacity: 0.4;
+	transition:
+		opacity 0.2s,
+		transform 0.2s;
 }
 
-.paymentsSection li,
-.paymentsSection img,
-.paymentsSection svg {
-	opacity: 0.7;
-	transition:
-		opacity 0.2s ease,
-		transform 0.2s ease;
-}
-.paymentsSection li:hover,
-.paymentsSection img:hover,
-.paymentsSection svg:hover {
+.paymentsSection li:hover {
 	opacity: 1;
 	transform: scale(1.08);
 }
 
 .allRights {
 	margin-top: 3rem;
-	text-align: center;
 	padding: 1rem;
+	text-align: center;
+}
+
+.toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.arrow {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.footerContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'social payments'
+			'company company';
+		gap: 3rem;
+	}
+
+	.socialSection {
+		grid-area: social;
+	}
+
+	.paymentsSection {
+		grid-area: payments;
+		justify-self: end;
+	}
+
+	.companySection {
+		grid-area: company;
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.companySection {
+		flex-direction: column;
+	}
+
+	.footerSection h4 {
+		margin-bottom: 0;
+	}
+
+	.toggle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 0;
+		cursor: pointer;
+		border-bottom: 1px solid #e5e7eb;
+	}
+
+	.arrow {
+		display: flex;
+		transition: transform 0.3s;
+	}
+
+	.arrowOpen {
+		transform: rotate(180deg);
+	}
+
+	.list {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition:
+			max-height 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+			opacity 0.25s ease;
+	}
+
+	.open {
+		max-height: 500px;
+		opacity: 1;
+	}
+
+	.paymentsSection {
+		margin-top: 1rem;
+	}
+}
+@media (max-width: 480px) {
+	.footerContainer {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'social '
+			'payments '
+			'company';
+	}
+	.paymentsSection {
+		justify-self: flex-start;
+	}
 }

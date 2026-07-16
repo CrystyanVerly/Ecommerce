@@ -48,3 +48,9 @@
 	height: auto;
 	object-fit: contain;
 }
+
+@media (max-width: 480px) {
+	.browseSection img {
+		display: none;
+	}
+}

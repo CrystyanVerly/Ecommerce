@@ -4,6 +4,10 @@
 	justify-content: space-between;
 }
 
+.info {
+	padding: 0 1rem;
+}
+
 .newsletter h1 {
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -23,4 +27,21 @@
 }
 .emailNews button {
 	margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+	.newsletter > div {
+		display: block;
+	}
+}
+
+@media (max-width: 425px) {
+	.emailNews {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.emailNews button {
+		margin-left: 0px !important;
+	}
 }

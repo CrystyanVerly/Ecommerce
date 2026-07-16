@@ -7,7 +7,7 @@ const Newsletter = () => {
 	return (
 		<section className={styles.newsletter}>
 			<div className="container">
-				<div>
+				<div className={styles.info}>
 					<h1>Join Our NewsLetter</h1>
 					<p>We love to surprise our subscribers with occasional gifts.</p>
 				</div>
